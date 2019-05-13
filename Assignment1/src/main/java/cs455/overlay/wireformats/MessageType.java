@@ -1,0 +1,23 @@
+package cs455.overlay.wireformats;
+
+public enum MessageType {
+	REGISTER_REQUEST,
+	REGISTER_RESPONSE,
+	DEREGISTER_REQUEST,
+	DEREGISTER_RESPONSE,
+	MESSAGING_NODES_LIST,
+	MESSAGE_REQUEST,
+	MESSAGE_TEST,
+	LINK_WEIGHTS,
+	TASK_MESSAGE,
+	TASK_INITIATE,
+	TASK_COMPLETE,
+	PULL_TRAFFIC_SUMMARY,
+	TRAFFIC_SUMMARY,
+	ESTABLISH_CONNECTION,
+	BIDIRECTIONAL_TEST;	
+	
+    public static MessageType convert(byte value) {
+        return MessageType.values()[value];
+    }        
+}
